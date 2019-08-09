@@ -24,6 +24,17 @@ Python script to find the Top n pages from your Google analytics account and wri
 
   Follow [these instructions](https://cloud.google.com/iam/docs/creating-managing-service-accounts#iam-service-accounts-create-console) to create a service account in Google console. Download the `key.json` file and specify the file location in `.env`.
 
+  Note: You'll also need to enable Google analytics APIs.
+
++ Add Google Analytics VIEW_ID in environment
+  Follow these steps to get the VIEW_ID for your analytics account:
+
+  * Sign in to Google Analytics.
+  * Click Admin, and navigate to View.
+  * In the VIEW column, click View Settings.
+  * You'll find View ID in Basic Settings.
+
+
 + Run the script
   ```bash
   $ python main.py 

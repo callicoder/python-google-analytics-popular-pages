@@ -4,7 +4,7 @@ Python script to find the Top n pages from your Google analytics account and wri
 
 ### How to run
 
-+ Use virtualenv to create a virtual environment
++ **Use virtualenv to create a virtual environment**
 
   ```bash
   # Create a virtual env
@@ -14,19 +14,20 @@ Python script to find the Top n pages from your Google analytics account and wri
   $ source venv/bin/activate
   ```
 
-+ Install dependencies using Pip
++ **Install dependencies using pip**
 
   ```bash
   $ pip install -r requirements.txt
   ```
 
-+ Specify Google service account credentials file location
++ **Specify Google service account credentials file location**
 
-  Follow [these instructions](https://cloud.google.com/iam/docs/creating-managing-service-accounts#iam-service-accounts-create-console) to create a service account in Google console. Download the `key.json` file and specify the file location in `.env`.
+  Follow [these instructions](https://cloud.google.com/iam/docs/creating-managing-service-accounts#iam-service-accounts-create-console) to create a service account in Google console. Download the `key.json` file and set the `KEY_FILE_LOCATION` in `.env`.
 
   Note: You'll also need to enable Google analytics APIs.
 
-+ Add Google Analytics VIEW_ID in environment
++ **Add Google Analytics VIEW_ID in environment**
+
   Follow these steps to get the VIEW_ID for your analytics account:
 
   * Sign in to Google Analytics.
@@ -35,7 +36,8 @@ Python script to find the Top n pages from your Google analytics account and wri
   * You'll find View ID in Basic Settings.
 
 
-+ Run the script
++ **Run the script**
+  
   ```bash
   $ python main.py 
   ```   

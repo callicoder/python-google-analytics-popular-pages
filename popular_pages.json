@@ -1,0 +1,64 @@
+{
+   "popular": [
+      {
+         "path": "/java-arraylist/",
+         "views": 23013
+      },
+      {
+         "path": "/spring-boot-file-upload-download-rest-api-example/",
+         "views": 18743
+      },
+      {
+         "path": "/spring-boot-rest-api-tutorial-with-mysql-jpa-hibernate/",
+         "views": 17967
+      },
+      {
+         "path": "/java-8-completablefuture-tutorial/",
+         "views": 15061
+      },
+      {
+         "path": "/hibernate-spring-boot-jpa-one-to-many-mapping-example/",
+         "views": 14815
+      },
+      {
+         "path": "/java-read-excel-file-apache-poi/",
+         "views": 14804
+      },
+      {
+         "path": "/node-js-express-mongodb-restful-crud-api-tutorial/",
+         "views": 13987
+      },
+      {
+         "path": "/spring-boot-spring-security-jwt-mysql-react-app-part-2/",
+         "views": 12429
+      },
+      {
+         "path": "/java-hashmap/",
+         "views": 12120
+      },
+      {
+         "path": "/spring-boot-actuator/",
+         "views": 12120
+      },
+      {
+         "path": "/spring-boot-jpa-hibernate-postgresql-restful-crud-api-example/",
+         "views": 11724
+      },
+      {
+         "path": "/java-write-excel-file-apache-poi/",
+         "views": 10285
+      },
+      {
+         "path": "/spring-boot-task-scheduling-with-scheduled-annotation/",
+         "views": 10261
+      },
+      {
+         "path": "/spring-boot-security-oauth2-social-login-part-1/",
+         "views": 8116
+      },
+      {
+         "path": "/spring-boot-actuator-metrics-monitoring-dashboard-prometheus-grafana/",
+         "views": 8099
+      }
+   ]
+}

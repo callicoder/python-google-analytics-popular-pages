@@ -1,11 +1,15 @@
-"""Hello Analytics Reporting API V4."""
+"""Find Popular pages from Google Analytics."""
 
 from apiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
 import yaml
 import json
 import os
+import logging
 from dotenv import load_dotenv
+
+# Configure Logging
+logging.basicConfig(level=logging.INFO, stream=sys.stdout, format='%(asctime)-15s: %(name)s - %(levelname)s - %(message)s')
 
 # Loading environment variables
 load_dotenv()
@@ -23,6 +27,8 @@ def initialize_analyticsreporting():
   Returns:
     An authorized Analytics Reporting API V4 service object.
   """
+  logging.info("Initializing Analytics API...")
+
   credentials = ServiceAccountCredentials.from_json_keyfile_name(
       KEY_FILE_LOCATION, SCOPES)
 
@@ -40,6 +46,8 @@ def get_report(analytics):
   Returns:
     The Analytics Reporting API V4 response.
   """
+  logging.info("Fetching reports from google analytics")
+
   return analytics.reports().batchGet(
       body={
         'reportRequests': [
@@ -56,11 +64,12 @@ def get_report(analytics):
 
 
 def write_response(response):
-  """Parses and prints the Analytics Reporting API V4 response.
+  """Parses and writes the Analytics Reporting API V4 response.
 
   Args:
     response: An Analytics Reporting API V4 response.
   """
+  logging.info("Parsing analytics response...")
 
   for report in response.get('reports', []):
     columnHeader = report.get('columnHeader', {})
@@ -87,6 +96,7 @@ def write_response(response):
           'views': int(page_views_metric)
         })
 
+    logging.info("Writing response...")
     if OUTPUT_FORMAT == 'json':
       write_json_response(pages)
     elif OUTPUT_FORMAT == 'yaml' or OUTPUT_FORMAT == 'yml':
